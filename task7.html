@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        div{
+            text-align: center;
+            width: 300px;
+            height: 500px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            background:blue;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let arr=[
+    {
+      "id": 5,
+      "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "price": 695,
+      "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    }
+  
+  ]
+
+
+  
+
+    let div_main=document.createElement("div")
+    div_main.style.border="2px solid black"
+
+    let img_1=document.createElement("img")
+    img_1.src=arr[0].image
+
+    let tit_1=document.createElement("h2")
+    tit_1.innerText=arr[0].title
+
+    let p_1=document.createElement("p")
+    p_1.innerText=arr[0].description
+
+    let btn=document.createElement("button")
+    btn.innerText="buy"
+    btn.addEventListener("click",function(){
+        window.open("./task3.html",self)
+    })
+    div_main.append(img_1,tit_1,p_1,btn)
+    document.body.append(div_main)
+
+    // console.log(img_1)
+    </script>
+</body>
+</html>

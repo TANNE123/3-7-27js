@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        div{
+            text-align: center;
+            width: 300px;
+            height: 500px;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        button{
+            width: 100px;
+            height: 30px;
+            background:blue;
+            color: white;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let arr=[
+    {
+      "id": 1,
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    }
+  
+  ]
+
+
+  
+
+    let div_main=document.createElement("div")
+    div_main.style.border="2px solid black"
+
+    let img_1=document.createElement("img")
+    img_1.src=arr[0].image
+
+    let tit_1=document.createElement("h2")
+    tit_1.innerText=arr[0].title
+
+    let p_1=document.createElement("p")
+    p_1.innerText=arr[0].description
+
+    let btn=document.createElement("button")
+    btn.innerText="buy"
+    btn.addEventListener("click",function(){
+        window.open("./task4.html",self)
+    })
+    div_main.append(img_1,tit_1,p_1,btn)
+    document.body.append(div_main)
+
+    // console.log(img_1)
+    </script>
+</body>
+</html>
